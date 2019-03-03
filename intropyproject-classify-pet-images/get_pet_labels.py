@@ -54,6 +54,16 @@ def get_pet_labels(image_dir):
     return results_dic
 
 def create_label_from_filename(filename):
+    """
+    Takes a filename and turns it into a list with a single lowercase string
+    containing the pet label that is in the filename
+    (ex. filename = 'Boston_terrier_02259.jpg' Pet label = 'boston terrier')
+    Parameters:
+     filename - The filename (string)
+    Returns:
+      List with filename turned into lowercase string stripped of numbers and
+      extensions (e.g. 'Boston_terrier_02259.jpg' => ['boston terrier'])
+    """
   name_list = filename.split("_")[:-1]
 
   for idx in range(0, len(name_list)):
