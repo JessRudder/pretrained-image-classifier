@@ -80,16 +80,48 @@ parser.add_argument('--dir', type = str, default = 'pet_images/',
 `help` - Text that willa ppear if user types prgoram name then `-h` or `--help`
 
 # 8 - Project Workspace: Command Line Arguments
-
+Implement the 3 command line arguments and return the parser
 
 # 9 - Mutable Data Types and Functions
-
+mutable data types - can be changed after they're created
+  - lists, dictionaries, sets
+immutable data types - cannot be changed after they're created
+  - integers, tuples, strings, etc
 
 # 10 - Creating Pet Image Labels
+Fill in `get_pet_labels()` function to create pet image labels
+  - dictionary where key = `filename` and value = `file label`
 
+Expected Outcome
+  - code will return dictionary with pet image filename as key and list with pet image label as value for all 40 images in pet_image folder
+
+Manual Check
+  - run `check_images.py`
+    - The dictionary containing 40 key-value pairs (e.g. dictionary length is 40).
+    - The pet image labels the following way:
+      -dirLower case letters
+      - Single space separating each word
+      - Correct representation of the filenames (from the 10 key-value pairs)
+
+To read filenames
+  - import listdir from os module
+
+```
+# Imports only listdir function from OS module 
+from os import listdir  
+
+# Retrieve the filenames from folder pet_images/
+filename_list = listdir("pet_images/")
+```
+
+Create Pet Image Labels
+  - Label: with only lower case letters
+  - Blank space separating each word in a label composed of multiple words
+  - Whitespace characters stripped from front & end of label
 
 # 11 - Project Workspace: Pet Image Labels
-
+Create a list of pet photo filenames and turn them into a dictionary with filenames as keys and the label (from the file name) in a list as the value
+  - Saint_bernard_34322.jpg => `{ 'Saint_bernard_34322.jpg': ['saint bernard'] }`
 
 # 12 - Classifying Images
 
