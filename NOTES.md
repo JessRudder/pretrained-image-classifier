@@ -44,13 +44,40 @@ Discusses how to use the built in work space.
 Good video to watch if you need to know how to add/delete files or reset the workspace to its original format
 
 # 5 - Timing Code
+Test the timing output by adding `sleep()` with various times
+  - note: `sleep` in Python uses seconds, not milliseconds like Ruby!
 
+Output showed how long it took (and indicated that a bunch of things hadn't been implemented yet)
+
+Walks through the already implemented timing code
+  - of special note is the formatting for the output string
 
 # 6 - Project Workspace - Timing
-
+Implemented in the given workspace
 
 # 7 - Command Line Arguments
+Write `get_input_args()` to create and retrieve command line arguments
+  - use `argparse` to retrieve 3 command line arguments
 
+Purpose
+  - command line arguments give your program more flexibility by allowing external inputs
+
+Argparse
+  - Will want folder that contains pet images, CNN model architecture to use, file with valid dog names
+  - create arg parser object using `argparse.ArgumentParser()` then use `add_argument_method` to allow users to enter the three inputs
+
+```
+# Creates Argument Parser object named parser
+parser = argparse.ArgumentParser()
+
+# Argument 1: that's a path to a folder
+parser.add_argument('--dir', type = str, default = 'pet_images/',
+                    help = 'path to the folder of pet images')
+```
+`--dir` - variable name of argument
+`type` - type of argument
+`default` - default value
+`help` - Text that willa ppear if user types prgoram name then `-h` or `--help`
 
 # 8 - Project Workspace: Command Line Arguments
 
