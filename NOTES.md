@@ -124,7 +124,21 @@ Create a list of pet photo filenames and turn them into a dictionary with filena
   - Saint_bernard_34322.jpg => `{ 'Saint_bernard_34322.jpg': ['saint bernard'] }`
 
 # 12 - Classifying Images
+Create classifier labels with classifier functions using in_arg.arch then compare labels and create dictionary of results
 
+Expected Outcome
+Code will return dictionary of lists with pet image filename as key and value will be list as follows:
+  - index 0 - pet image label
+  - index 1 - classifier label
+  - index 2 comparison of labels
+
+Testing the classifier function with `python test_classifier.py`
+  collie should be correctly classified as a collie
+
+Function will need to determine matches between pet image labels and labels from classifier function
+  use lower() to get them all lower case
+  use strip() to get rid of leading/trailing white space
+  use `in` to check if your label is in their label
 
 # 13 - Project Workspace: Classifying Images
 
