@@ -143,7 +143,6 @@ Function will need to determine matches between pet image labels and labels from
 # 13 - Project Workspace: Classifying Images
 Wrote the code
 
-
 # 14 - Classifying Labels as Dogs
 Goal is not just to see if the classification is correct, but to see if the classification is actually a dog
   - read in dog names from dognames.txt (turn into a dict, perhaps)
@@ -151,13 +150,17 @@ Goal is not just to see if the classification is correct, but to see if the clas
   - adjust results dict to indicate whether labels indicate image is 'of-a-dog'
 
 # 15 - Project Workspace: Adjusting Results
-
+Implemented solution
 
 # 16 - Calculating Results
-
+Calculate the results of a run and put the statistics in a results statistics dictionary
+  - we'll be creating the dictionary in the method so make sure we return it
+  - statistics name will be key and value will be the numeric value for that stat
+  - checks number of images, number of dog images, number of not-a dog images
+  - checks percentages of correctly classified dog images, correctly classified not a dog images and correctly classified breeds of dog images
 
 # 17 - Project Workspace: Calculating Results
-
+Implemented code
 
 # 18 - Printing Results
 
