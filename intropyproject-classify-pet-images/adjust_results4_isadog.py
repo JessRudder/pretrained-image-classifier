@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/adjust_results4_isadog.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Jessica Rudder
+# DATE CREATED: 2019-03-09
 # REVISED DATE: 
 # PURPOSE: Create a function adjust_results4_isadog that adjusts the results 
 #          dictionary to indicate whether or not the pet image label is of-a-dog, 
@@ -66,5 +66,38 @@ def adjust_results4_isadog(results_dic, dogfile):
                maltese) (string - indicates text file's filename)
     Returns:
            None - results_dic is mutable data type so no return needed.
-    """           
-    None
+    """
+    dog_dic = create_dog_dic(dogfile)
+    
+    for key in results_dic:
+      file_label = results_dic[key][0]
+      model_label = results_dic[key][1]
+
+      results_dic[key].append(1) if file_label in dog_dic else results_dic[key].append(0)
+      results_dic[key].append(1) if model_label in dog_dic else results_dic[key].append(0)
+
+def create_dog_dic(dogfile):
+    """
+    Creates a dictionary of of dog names as keys with arbitrary values of 1 based on
+    the dog breeds passed in the dogfile.
+    Parameters:
+     dogfile - A text file that contains names of all dogs from the classifier
+               function and dog names from the pet image files. This file has 
+               one dog name per line dog names are all in lowercase with 
+               spaces separating the distinct words of the dog name. Dog names
+               from the classifier function can be a string of dog names separated
+               by commas when a particular breed of dog has multiple dog names 
+               associated with that breed (ex. maltese dog, maltese terrier, 
+               maltese) (string - indicates text file's filename)
+    Returns:
+           dog_dic - a dictionary with keys that are strings of dog names and aribtrary
+           values of 1. e.g. { "basset hound": 1, "golden retreiver": 1 }
+    """
+    dog_dic = {}
+
+    with open(dogfile, 'r') as f:
+        for line in f:
+            breed = line.lower().strip()
+            dog_dic[breed] = dog_dic.get(breed, 1)
+
+    return dog_dic

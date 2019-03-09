@@ -141,10 +141,14 @@ Function will need to determine matches between pet image labels and labels from
   use `in` to check if your label is in their label
 
 # 13 - Project Workspace: Classifying Images
+Wrote the code
 
 
 # 14 - Classifying Labels as Dogs
-
+Goal is not just to see if the classification is correct, but to see if the classification is actually a dog
+  - read in dog names from dognames.txt (turn into a dict, perhaps)
+  - compare dog names to classifier and pet image labels in results dict
+  - adjust results dict to indicate whether labels indicate image is 'of-a-dog'
 
 # 15 - Project Workspace: Adjusting Results
 
