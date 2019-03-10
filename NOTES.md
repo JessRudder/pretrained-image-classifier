@@ -200,10 +200,10 @@ resnet, vgg, alexnet
 Did it!
 
 # 22 - Final Results
-
+Mine found the same results as theirs
 
 # 23 - Project Workspace: Final Results
-
+Nothing additional to check
 
 # 24 - Project: Use a Pre-trained Image Classifier to Identify Dog Breeds
-
+Submitted!
