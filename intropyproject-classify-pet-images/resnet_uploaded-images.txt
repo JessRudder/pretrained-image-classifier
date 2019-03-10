@@ -1,0 +1,82 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:              Sea_turtle_01.jpg  label:                 sea turtle
+ 4 key:             Alarm_clock_01.jpg  label:                alarm clock
+
+     MATCH:
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                         beagle
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                         beagle
+
+             Sea_turtle_01.jpg: 
+Real:                 sea turtle   Classifier: loggerhead, loggerhead turtle, caretta caretta
+
+            Alarm_clock_01.jpg: 
+Real:                alarm clock   Classifier:                   analog clock
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+     MATCH:
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             Sea_turtle_01.jpg: 
+Real:                 sea turtle   Classifier: loggerhead, loggerhead turtle, caretta caretta  
+PetLabelDog: 0  ClassLabelDog: 0
+
+            Alarm_clock_01.jpg: 
+Real:                alarm clock   Classifier:                   analog clock  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+###### Stats for Run Using RESNET Model ######
+
+Number of Images: 4
+Number of Dog Images: 2
+Number of 'Not-a' Dog Images: 2
+% Match: 0.0
+% Correct Dogs: 100.0
+% Correct Breed: 0.0
+% Correct Notdogs: 100.0
+
+
+###### There were NO Misclassified Dogs When Using RESNET Model ######
+
+
+
+###### Misclassified Breeds When Using RESNET Model ######
+
+Pet Label: dog vs Classifier Label: beagle
+Pet Label: dog vs Classifier Label: beagle
+
+** Total Elapsed Runtime: 0:0:0
