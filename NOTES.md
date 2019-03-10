@@ -163,7 +163,9 @@ Calculate the results of a run and put the statistics in a results statistics di
 Implemented code
 
 # 18 - Printing Results
-
+Print a summary of the results
+  - include incorrect classifications of dogs and breeds if requested
+Input results dic and results statistics dic to print summary of results
 
 # 19 - Project Workspace: Printing Results
 
