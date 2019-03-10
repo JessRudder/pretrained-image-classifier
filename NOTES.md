@@ -168,13 +168,36 @@ Print a summary of the results
 Input results dic and results statistics dic to print summary of results
 
 # 19 - Project Workspace: Printing Results
-
+Implemented Code
 
 # 20 - Classify Uploaded Images
+Upload 2 images of a dog (same image, one regular and one flipped)
+Upload image of an animal that is not a dog
+Upload an image of something that is not an animal
+
+Run the 3 models on them
+
+Answer these questions:
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+They did - all three decided the dog was a beagle. This is not correct, but, I get it.
+ 
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+alexnet - beagle/ring-tailed lemur
+resnet - beagle/beagle
+vgg - beagle/beagle
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+They correctly identified that the turtle and the clock were not dogs.
+ 
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+resnet and vgg did equally as good identifying all of the images. Resnet did the ranking almost instantl while vgg took 2 seconds. Based on that I'd rank the models in this order:
+resnet, vgg, alexnet
 
 
 # 21 - Project Workspace: Classify Uploaded Images
-
+Did it!
 
 # 22 - Final Results
 
